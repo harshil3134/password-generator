@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
 import { Switch } from '@/components/ui/switch';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Analytics } from "@vercel/analytics/react"
 
 export default function PasswordGenerator() {
   const [length, setLength] = useState(8);
@@ -60,6 +61,7 @@ export default function PasswordGenerator() {
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center p-4">
       <div className="bg-white shadow-lg rounded-lg overflow-hidden max-w-md w-full">
+  <Analytics />
         <Card className="w-full">
           <CardHeader>
             <CardTitle className="text-3xl font-bold text-gray-700">Password Generator</CardTitle>
